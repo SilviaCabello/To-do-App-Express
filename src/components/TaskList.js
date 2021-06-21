@@ -1,7 +1,11 @@
-const TaskLIst = () => {
+import Task from "./Task";
+
+const TaskLIst = ({ toDoList }) => {
   return (
     <div>
-      <p>This is TaskLIst Component</p>
+      {toDoList.map((toDo) => (
+        <Task toDo={toDo} />
+      ))}
     </div>
   );
 };
